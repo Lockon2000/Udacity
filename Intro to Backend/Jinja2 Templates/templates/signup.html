@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <form method="post">
+    <h2>SignUp</h2>
+    <table>
+        <tr>
+            <td style="text-align: right;"><label for="username">Username</label></td>
+            <td><input type="text" name="username" value="{{username}}"></td>
+            {% if usernameErrorLevel %}
+            <td style="color: red">Invalid Username!!</td>
+            {% endif %}
+        </tr>
+        <tr>
+            <td style="text-align: right;"><label for="password">Password</label></td>
+            <td><input type="password" name="password"></td>
+            {% if passwordErrorLevel %}
+            <td style="color: red">Invalid Password!!</td>
+            {% endif %}
+        </tr>
+        <tr>
+            <td style="text-align: right;"><label for="varify">Verify Password</label></td>
+            <td><input type="password" name="verify"></td>
+            {% if not passwordErrorLevel and verifyErrorLevel %}
+            <td style="color: red">Passwords don't match</td>
+            {% endif %}
+        </tr>
+        <tr>
+            <td style="text-align: right;"><label for="email">E-Mail (optional)</label></td>
+            <td><input type="text" name="email" value="{{email}}"></td>
+            {% if emailErrorLevel %}
+            <td style="color: red">Invalid E-Mail-Address!!</td>
+            {% endif %}
+        </tr>
+    </table>
+        <input type="submit">
+  </form>
+{% endblock %}

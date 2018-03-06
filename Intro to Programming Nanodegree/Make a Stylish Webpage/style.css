@@ -1,0 +1,92 @@
+html {
+  background: url(img/background.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+body {
+  font-family: arial, "Times New Roman", serif;
+}
+
+div, p {
+	flex-grow: 1;
+	flex-shrink: 0;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	background-color: #4C382D;
+	width: 50%;
+	margin: auto;
+	border-radius: 80px;
+	color: #D5D4D2;
+	border: 5px solid #322727;
+	box-shadow: 5px 5px 10px #3e3c3c;
+}
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+main > * {
+	margin: 10px;
+}
+
+figure {
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+}
+
+figcaption {
+	margin: auto;
+}
+
+img {
+	border-radius: 30px;
+	margin: auto;
+}
+
+.part {
+	display: flex;
+	flex-wrap: wrap;
+	border-radius: 10px;
+	padding: 10px;
+	box-shadow: 5px 5px 10px gray;
+
+}
+
+#www {
+	background-color: #91C757;
+	border: 5px solid #5C9223;
+
+}
+
+#html {
+	background-color: #C27F2F;
+	border: 5px solid #965424;
+}
+
+#html > * {
+	width: 48%;
+	margin: 1%;
+}
+
+#html span {
+	background-color: #985826;
+}
+
+#css {
+	background-color: #478A92;
+	border: 5px solid #266167; 
+}
+
+#css > * {
+	width: 48%;
+	margin: 1%;
+}
+
+#css span {
+	background-color: #27646B;
+}

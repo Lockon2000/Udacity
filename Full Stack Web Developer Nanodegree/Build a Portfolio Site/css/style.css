@@ -1,0 +1,118 @@
+* {
+  font-family: Arial, "Lucida Console", Georgia;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(../img/back.jpg) fixed;
+}
+
+header {
+  height: 10%;
+}
+
+main {
+  height: 90%;
+}
+
+hr {
+  background: #2e3c49;
+  border: none;
+  height: 3px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.center {
+  text-align: center;
+}
+
+.bordered {
+  border: black outset 2px;
+}
+
+.title {
+  margin-left: 10px;
+  color: #7d97ad;
+}
+
+.thumbnail {
+  width: 90%;
+  margin: 5%;
+  border-radius: 10px;
+  border-style: outset;
+}
+
+.project {
+  width: 33.33%
+}
+
+.card {
+  order: 2;
+}
+
+.name,
+.job {
+  margin: 12px 0;
+}
+
+.logo {
+  width: 115px;
+  height: 100px;
+  order: 1;
+}
+
+.about {
+  width: 60%;
+}
+
+.photo {
+  width: 35%;
+}
+
+.contact {
+  position: absolute;
+  left: 0;
+  background: gray;
+  width: 100%;
+  text-align: center;  
+}
+
+.social {
+  margin: 0.5% 2%;
+}
+
+@media screen and (max-width: 700px) {
+  .project {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .card,
+  .logo,
+  .about,
+  .photo {
+    margin: 10px auto;
+    text-align: center;
+  }
+  
+  .about {
+    width: 80%;
+  }
+  
+  .photo {
+    width: 35%;
+  }
+}

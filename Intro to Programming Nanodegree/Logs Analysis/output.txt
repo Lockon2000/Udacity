@@ -1,0 +1,30 @@
++---------------------------------+
+|Log Analysis of the News Database|
++---------------------------------+
+
+Welcome
+This program provides some basic analysis functions to the News Database.
+The functionality is provided through querys run against the PostgreSQL Database.
+
+(Press any key to continue)
+
+
+The provided questions are:
+1. What are the most popular articles of all time?
+2. Who are the most popular article authors of all time?
+3. On which days did a certain percent of requests lead to errors?
+
+Your desired Question (input a number 1-3): 2
+How many top authors should be displayed? (input a number 1-20): 10
+The most popular writers are:
+
+Ursula La Multa --------------- 507594 views.
+Rudolf von Treppenwitz -------- 423457 views.
+Anonymous Contributor --------- 170098 views.
+Markoff Chaney ---------------- 84557 views.
++++++++++++++++++ No more authors +++++++++++++++++
+
+
+Do you want to ask another Question? (Y\N): n
+I hope you found the analysis helpful.
+Exiting!!!
