@@ -1,0 +1,22 @@
+<header class="flex-container">
+  <div class="logo">
+    <h1 class="no-margin">Company</h1>
+  </div>
+
+  <div class="login">
+    {%if 'username' not in session %}
+    <a href="{{url_for('showLogin')}}">Login</a>
+    {% else %}
+    <a href="{{url_for('disconnect')}}">Logout</a>
+    {% endif %}
+  </div>
+
+  <nav class="flex-container">
+    <a href="/">Home</a>
+    <a href="{{url_for('createItem')}}">Create new item</a>
+    {% if item %}
+    <a href="{{url_for('editItem', itemID=item.id)}}">Edit item</a>
+    <a href="{{url_for('deleteItem', itemID=item.id)}}">Delete item</a>
+    {% endif %}
+  </nav>
+</header>

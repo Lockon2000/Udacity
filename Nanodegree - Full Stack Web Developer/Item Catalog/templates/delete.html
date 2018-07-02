@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+{% include "header.html" %}
+<main>
+    <h2 class="warning">
+        Are you sure you want to delete {{item.name}}?!!!
+    </h2>
+
+    <form method="post">
+        <button type="submit" id="submit">submit</button>
+    </form>
+</main>
+{% include "footer.html" %}
+{% endblock %}

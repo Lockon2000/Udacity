@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+{% include "header.html" %}
+<main>
+  <div>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="flash">{{ message }}</div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+  </div>
+
+  <div class="catalog flex-container">
+    <div class="categories">
+      <h2 class="categoriesHeader">All Categories</h2>
+
+      <div class="categoriesEntries flex-container">
+      {% if categories %}
+      {% for category in categories %}
+        <div class="category">
+          <a href="{{url_for('showCategory', category=category)}}"> {{category}}</a>
+        </div>
+      {% endfor %}
+      {% endif %}
+      </div>
+    </div>
+
+    <div class="latestItems">
+      <h2 class="latestItemsHeader">Latest Items</h2>
+
+      <div class="latestItemsEntries flex-container">
+      {% if latestItems %}
+      {% for item in latestItems %}
+        <div class="latestItem">
+          <a href="{{url_for('showItem', itemID=item.id)}}"> {{item.name}}</a>
+        </div>
+      {% endfor %}
+      {% endif %}
+      </div>
+    </div>
+  </div>
+</main>
+{% include "footer.html" %}
+{% endblock %}

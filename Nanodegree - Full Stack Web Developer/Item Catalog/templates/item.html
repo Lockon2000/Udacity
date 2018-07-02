@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+{% include "header.html" %}
+<main>
+    <div class="itemDetails">
+        <h2>{{item.name}}</h2>
+        <ul>
+            <li>Description: {{item.description}}</li>
+            <li>Category: <a href="{{url_for('showCategory', category=item.category)}}">{{item.category}}</a></li>
+            <li>Date it was added: {{item.date}}</li>
+        </ul>
+    </div>
+</main>
+{% include "footer.html" %}
+{% endblock %}

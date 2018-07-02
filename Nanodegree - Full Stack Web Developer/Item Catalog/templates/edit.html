@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+{% include "header.html" %}
+<main>
+    <form method="post">
+        <div>
+            <label for="name">Name:
+            <input type ="text" maxlength="50" name="name" placeholder="{{item.name}}">
+            </label>
+            <br>
+            <label for="description">Description:
+            <textarea maxlength="250" name="description" placeholder="{{item.description}}"></textarea>
+            </label>
+            <br>
+            <label for="price">Category:
+            <input type ="text" maxlength="50" name="category" placeholder="{{item.category}}">
+            </label>
+            <br>
+            <button type="submit" id="submit">submit</button>
+        </div>
+    </form>
+</main>
+{% include "footer.html" %}
+{% endblock %}

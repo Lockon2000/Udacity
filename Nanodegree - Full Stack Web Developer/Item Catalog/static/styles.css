@@ -1,0 +1,221 @@
+.no-margin {
+    margin: 0;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html::after {
+    content: "";
+    background: url(background.png);
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+header {
+    background-color: grey;
+    justify-content: space-between;
+    width: 80%;
+    margin: 5px auto;
+    border-radius: 10px;
+    box-shadow:20px 20px 50px 15px grey;
+}
+
+.logo {
+    padding: 10px;
+}
+
+.login {
+    background-color: azure;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.login:hover {
+    background-color: darkgray;
+}
+
+.login a {
+    display: block;
+    margin: auto;
+    padding: 15px;
+    text-decoration: none;
+    color: blue
+}
+
+nav {
+    width: 100%;
+    background-color: darkcyan;
+    border-radius: 4px;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: blue;
+    margin: 0 5px;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: cyan;
+}
+
+main {
+    width: 80%;
+    margin: 5px auto;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    box-shadow:20px 20px 50px 15px grey;
+}
+
+.flash {
+    background-color: rgba(162, 248, 162, 0.78);
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.categories {
+    width: 30%;
+}
+
+.categoriesHeader {
+  margin: 10px auto;
+  width: 50%;
+  text-align: center;
+}
+
+.categoriesEntries {
+    flex-flow: column wrap;
+}
+
+.category {
+    margin: 10px;
+    border-radius: 10px;
+    background-color: greenyellow;
+    height: 35px;
+}
+
+.category a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: blue;
+    margin: 0 auto;
+    width: 60%;
+    padding: 10px;
+}
+
+.category:hover {
+    box-shadow: 5px 10px #888888;
+}
+
+.latestItems {
+    width: 70%;
+    align-content: flex-start;
+}
+
+.latestItemsHeader {
+  margin: 10px auto;
+  width: 50%;
+  text-align: center;
+}
+
+.latestItem {
+    margin: 10px;
+    border-radius: 10px;
+    background-color: orange;
+}
+
+.latestItem a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: blue;
+    padding: 10px;
+}
+
+.latestItem:hover {
+    box-shadow: 5px 10px #888888;
+}
+
+.items {
+    flex-flow: column wrap;
+}
+
+.item {
+    margin: 10px;
+    border-radius: 10px;
+    background-color: lightblue;
+    height: 35px;
+}
+
+.item a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: blue;
+    margin: 0 auto;
+    width: 60%;
+    padding: 10px;
+}
+
+.item:hover {
+    box-shadow: 5px 10px #888888;
+}
+
+.itemDetails {
+  padding: 10px;
+}
+
+.loginPlate {
+  width: 45%;
+  padding: 25px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.loginHeader {
+  text-align: center;
+}
+
+.g-signin2 {
+    padding: 40px;
+    box-shadow:20px 20px 50px 5px grey;
+    border-radius: 50px
+}
+
+.result {
+    border-radius: 4px;
+    box-shadow:20px 20px 50px 5px grey;
+    width: 100%;
+    word-wrap: break-word;
+    background-color: #bfe9b7;
+}
+
+form {
+    padding: 25px;
+}
+
+label {
+    margin: 5px;
+}
+
+.warning {
+    padding: 10px;
+    color: red;
+}

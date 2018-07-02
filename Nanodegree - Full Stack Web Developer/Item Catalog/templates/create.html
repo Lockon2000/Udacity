@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+{% include "header.html" %}
+<main>
+    <form method="post">
+        <div>
+            <label for="name">Name:</label>
+            <input type ="text" maxlength="50" name="name" placeholder="Name of the item">
+            <br>
+            <label for="description">Description:</label>
+            <textarea maxlength="250" name="description" placeholder="Description of the item"></textarea>
+            <br>
+            <label for="price">Category:</label>
+            <input type ="text" maxlength="50" name="category" placeholder="Category of the item">
+            <br>
+            <button type="submit" id="submit">submit</button>
+        </div>
+    </form>
+</main>
+{% include "footer.html" %}
+{% endblock %}
