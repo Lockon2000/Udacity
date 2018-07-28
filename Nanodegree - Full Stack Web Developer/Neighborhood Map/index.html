@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" href="img/favicon.ico">
+  </head>
+  <body>
+    <div class="container">
+        <div class="side-panel">
+            <button class="filter-button" data-bind="click:toggleFilter">Filter</button>
+            <div class="filter-list" data-bind="foreach:locations, visible: filterVisible" style="display: none;">
+                <input type='checkbox' data-bind="checked: visible, attr: {value: id}" checked><span data-bind="text: title"></span><br>
+            </div>
+
+            <ul class="marker-list" data-bind="foreach: locations">
+                <li data-bind="html: title+'<br>'+address, visible: visible, attr: {onmouseover: 'linkToMouseOverEvent('+id+')', onmouseout: 'linkToMouseOutEvent('+id+')', onclick: 'linkToClickEvent('+id+')'}"></li>
+            </ul>
+        </div>
+        <div id="map"></div>
+    </div>
+    <div class="attribution">With help of Wikipedia</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" onerror="mapsApiError()"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js" onerror="mapsApiError()"></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAKwV4bXW_Ae_QAO3Hc10abeThdaEsHIwM&v=3&callback=initMap" onerror="mapsApiError()"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
