@@ -1,0 +1,88 @@
+@use 'vars' as *;
+@use 'extends' as *;
+
+
+* {
+  box-sizing: border-box;
+  @extend %normal-font;
+}
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: $breakpoint-s) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: $breakpoint-m) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: $breakpoint-l) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: $breakpoint-xl) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: $breakpoint-xxl) {
+  html {
+    font-size: 20px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @extend %headings-font;
+}
+
+a {
+  color: $color10;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+#global-header {
+  display: flex;
+  justify-content: space-between;
+  grid-area: header;
+}
+
+#title-container, #subscribe-container, #search-container {
+  @extend %flex-center;
+}
+
+#title-container {
+  padding: 0 2rem;
+
+  text-decoration: underline;
+  text-decoration-thickness: 0.2rem;
+}
+
+#subscribe-container, #search-container {
+  padding: 2rem;
+}
+
+#global-footer {
+  @extend %flex-center;
+  grid-area: footer;
+
+
+  border-top: .1rem solid $color3-dark;
+
+  color: $color4-dark;
+  background-color: $color3;
+}

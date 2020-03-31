@@ -1,0 +1,102 @@
+@use 'vars' as *;
+@use 'extends' as *;
+@use 'base' as *;
+
+
+body {
+  display: grid;
+  
+  grid-template: 
+    "header" 15vh
+    "main" auto
+    "footer" 6vh
+    / auto;
+  
+  @media (min-width: $breakpoint-xl) {
+    grid-template: 
+      "header header" 15vh
+      "article aside" auto
+      "footer footer" 6vh
+      / auto 25vw;
+    
+    main {
+      display: contents;
+    }
+  }
+}
+
+#title-container {
+  cursor: pointer;
+}
+
+main > article {
+  padding: 2rem;
+}
+
+#article-title {
+  margin-bottom: 0;
+
+  font-size: 2.5rem;
+}
+
+#article-date-author {
+  margin: 0 0 1rem;
+
+  color: $color6;
+}
+
+#article-entry {
+  margin: 2rem;
+  border-radius: 1rem;
+  border: 0.1rem solid $color3-dark;
+}
+
+.article-heading {
+  font-size: 2rem;
+}
+
+.article-sub-heading {
+  font-size: 1.5rem;
+}
+
+#article-navigation {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.article-nav {
+  padding: 1rem;
+  border: .2rem solid $color10;
+  border-radius: 2rem;
+  margin: 0 2rem;
+
+  &:hover {
+    box-shadow: 0 0 1rem .3rem $color10-light;
+  }
+}
+
+.article-nav-disabled {
+  border: .2rem solid lighten($color: $color10, $amount: 25%);
+
+  color: lighten($color: $color10, $amount: 25%);
+  &:hover {
+    box-shadow: 0 0 0 0;
+  }
+}
+
+main > aside {
+  padding: 1rem;
+}
+
+#about {
+  padding: 1rem;
+  border-radius: 1rem;
+
+  text-align: justify; 
+  background-color: $color3;
+}
+
+.aside-link-list {
+  list-style-type: none;
+  padding-left: 1rem;
+}

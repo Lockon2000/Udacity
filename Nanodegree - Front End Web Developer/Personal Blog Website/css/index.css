@@ -1,0 +1,154 @@
+#title-container, #subscribe-container, #search-container, #global-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 576px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (min-width: 992px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (min-width: 2000px) {
+  html {
+    font-size: 20px;
+  }
+}
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+#global-header {
+  display: flex;
+  justify-content: space-between;
+  grid-area: header;
+}
+
+#title-container {
+  padding: 0 2rem;
+  text-decoration: underline;
+  text-decoration-thickness: 0.2rem;
+}
+
+#subscribe-container, #search-container {
+  padding: 2rem;
+}
+
+#global-footer {
+  grid-area: footer;
+  border-top: 0.1rem solid #c0cdd1;
+  color: #6d8082;
+  background-color: #ecf0f1;
+}
+
+body {
+  display: grid;
+  grid-template: "header" 15vh "main" auto "footer" 6vh/auto;
+}
+
+#posts {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: center;
+  padding: 1rem;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 35rem;
+  border: 0.3rem solid #c0cdd1;
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0.75rem 0.75rem 0.4rem 0 rgba(0, 0, 0, 0.15);
+}
+@media (min-width: 576px) {
+  .post {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
+@media (min-width: 768px) {
+  .post {
+    width: 47%;
+    margin: 1rem 1.5%;
+  }
+}
+@media (min-width: 992px) {
+  .post {
+    width: 47%;
+    margin: 1rem 1.5%;
+  }
+}
+@media (min-width: 1200px) {
+  .post {
+    width: 30%;
+    margin: 1rem 1.5%;
+  }
+}
+@media (min-width: 2000px) {
+  .post {
+    width: 30%;
+    margin: 1rem 1.5%;
+  }
+}
+
+.post-category-1 {
+  color: #2ecc71;
+}
+.post-category-2 {
+  color: #9b59b6;
+}
+
+.post-title {
+  margin-bottom: 0;
+}
+
+.post-date {
+  margin-bottom: 1rem;
+  color: #e67e22;
+}
+
+.continue-link {
+  margin-top: auto;
+  display: block;
+}

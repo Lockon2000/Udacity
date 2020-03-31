@@ -1,0 +1,45 @@
+$breakpoint-xs: 0;
+$breakpoint-s: 576px;
+$breakpoint-m: 768px;
+$breakpoint-l: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 2000px;
+
+$color1:  white;
+$color2:  black;
+$color3:  #ecf0f1;
+$color4:  #95a5a6;
+$color5:  #e74c3c;
+$color6:  #e67e22;
+$color7:  #f1c40f;
+$color8:  #2ecc71;
+$color9:  #1abc9c;
+$color10:  #3498db;
+$color11:  #34495e;
+$color12:  #9b59b6;
+
+$color1-dark:  darken($color1, 15%);
+$color2-dark:  darken($color2, 15%);
+$color3-dark:  darken($color3, 15%);
+$color4-dark:  darken($color4, 15%);
+$color5-dark:  darken($color5, 15%);
+$color6-dark:  darken($color6, 15%);
+$color7-dark:  darken($color7, 15%);
+$color8-dark:  darken($color8, 15%);
+$color9-dark:  darken($color9, 15%);
+$color10-dark:  darken($color10, 15%);
+$color11-dark:  darken($color11, 15%);
+$color12-dark:  darken($color12, 15%);
+
+$color1-light:  lighten($color1, 15%);
+$color2-light:  lighten($color2, 15%);
+$color3-light:  lighten($color3, 15%);
+$color4-light:  lighten($color4, 15%);
+$color5-light:  lighten($color5, 15%);
+$color6-light:  lighten($color6, 15%);
+$color7-light:  lighten($color7, 15%);
+$color8-light:  lighten($color8, 15%);
+$color9-light:  lighten($color9, 15%);
+$color10-light:  lighten($color10, 15%);
+$color11-light:  lighten($color11, 15%);
+$color12-light:  lighten($color12, 15%);

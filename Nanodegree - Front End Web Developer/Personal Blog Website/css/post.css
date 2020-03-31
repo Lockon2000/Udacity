@@ -1,0 +1,163 @@
+#title-container, #subscribe-container, #search-container, #global-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 576px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (min-width: 992px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (min-width: 2000px) {
+  html {
+    font-size: 20px;
+  }
+}
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+#global-header {
+  display: flex;
+  justify-content: space-between;
+  grid-area: header;
+}
+
+#title-container {
+  padding: 0 2rem;
+  text-decoration: underline;
+  text-decoration-thickness: 0.2rem;
+}
+
+#subscribe-container, #search-container {
+  padding: 2rem;
+}
+
+#global-footer {
+  grid-area: footer;
+  border-top: 0.1rem solid #c0cdd1;
+  color: #6d8082;
+  background-color: #ecf0f1;
+}
+
+body {
+  display: grid;
+  grid-template: "header" 15vh "main" auto "footer" 6vh/auto;
+}
+@media (min-width: 1200px) {
+  body {
+    grid-template: "header header" 15vh "article aside" auto "footer footer" 6vh/auto 25vw;
+  }
+  body main {
+    display: contents;
+  }
+}
+
+#title-container {
+  cursor: pointer;
+}
+
+main > article {
+  padding: 2rem;
+}
+
+#article-title {
+  margin-bottom: 0;
+  font-size: 2.5rem;
+}
+
+#article-date-author {
+  margin: 0 0 1rem;
+  color: #e67e22;
+}
+
+#article-entry {
+  margin: 2rem;
+  border-radius: 1rem;
+  border: 0.1rem solid #c0cdd1;
+}
+
+.article-heading {
+  font-size: 2rem;
+}
+
+.article-sub-heading {
+  font-size: 1.5rem;
+}
+
+#article-navigation {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.article-nav {
+  padding: 1rem;
+  border: 0.2rem solid #3498db;
+  border-radius: 2rem;
+  margin: 0 2rem;
+}
+.article-nav:hover {
+  box-shadow: 0 0 1rem 0.3rem #75b9e7;
+}
+
+.article-nav-disabled {
+  border: 0.2rem solid #a0cfee;
+  color: #a0cfee;
+}
+.article-nav-disabled:hover {
+  box-shadow: 0 0 0 0;
+}
+
+main > aside {
+  padding: 1rem;
+}
+
+#about {
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: justify;
+  background-color: #ecf0f1;
+}
+
+.aside-link-list {
+  list-style-type: none;
+  padding-left: 1rem;
+}
