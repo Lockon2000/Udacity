@@ -11,3 +11,44 @@
 %headings-font {
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
+
+%image-frame {
+  position:relative;
+
+  padding: 2vmin;
+  border: solid 5vmin;
+  border-top-color: #ddd;
+  border-right-color: #eee;
+  border-bottom-color: #fff;
+  border-left-color: #eee;
+  border-radius: .25rem;
+
+  background-color: #ddc;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
+
+  &:before {
+    position:absolute;
+    top:-2vmin;
+    right:-2vmin;
+    bottom:-2vmin;
+    left:-2vmin;
+
+    border-radius:2px;
+
+    content:"";
+    box-shadow:0 2px 5px 0 rgba(0,0,0,.25) inset;
+  }
+
+  &:after {
+    position:absolute;
+    top:-2.5vmin;
+    right:-2.5vmin;
+    bottom:-2.5vmin;
+    left:-2.5vmin;
+
+    border-radius:2px;
+
+    content:"";
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
+  }
+}

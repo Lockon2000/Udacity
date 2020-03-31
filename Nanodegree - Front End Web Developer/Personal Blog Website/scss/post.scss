@@ -1,6 +1,7 @@
 @use 'vars' as *;
 @use 'extends' as *;
 @use 'base' as *;
+@use 'gen_post' as *;
 
 
 body {
@@ -30,7 +31,7 @@ body {
 }
 
 main > article {
-  padding: 2rem;
+  padding: 2rem 4rem;
 }
 
 #article-title {
@@ -59,16 +60,50 @@ main > article {
   font-size: 1.5rem;
 }
 
+#post-image-frame {
+  @extend %image-frame;
+  height: 60vh;
+}
+
+#post-image {
+  height: 100%;
+  width: 100%;
+
+  object-fit: cover;
+}
+
+#post-image-caption-frame {
+  @extend %image-frame;
+  width: max-content;
+  margin: .5rem auto 0;
+}
+
+#post-image-caption {
+  color: $color11;
+  text-align: center;
+  font-size: 2rem;
+}
+
 #article-navigation {
-  margin: 2rem 0;
+  margin: 3rem 0 2rem;
   text-align: center;
 }
 
 .article-nav {
+  display: block;
+  
+  @media (min-width: $breakpoint-l) {
+    display: initial;
+  }
+  
   padding: 1rem;
   border: .2rem solid $color10;
   border-radius: 2rem;
-  margin: 0 2rem;
+  margin: 2rem 10%;
+
+  @media (min-width: $breakpoint-l) {
+    margin: 0 2rem;
+  }
 
   &:hover {
     box-shadow: 0 0 1rem .3rem $color10-light;
@@ -91,12 +126,8 @@ main > aside {
 #about {
   padding: 1rem;
   border-radius: 1rem;
-
+  
+  color: $color11;
   text-align: justify; 
   background-color: $color3;
-}
-
-.aside-link-list {
-  list-style-type: none;
-  padding-left: 1rem;
 }

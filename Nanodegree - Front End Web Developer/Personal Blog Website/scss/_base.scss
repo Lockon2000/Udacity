@@ -53,6 +53,8 @@ a {
 body {
   min-height: 100vh;
   margin: 0;
+
+  background-image: url("../assets/images/background_pattern.png");
 }
 
 #global-header {
@@ -68,6 +70,8 @@ body {
 #title-container {
   padding: 0 2rem;
 
+  color: $color11-light;
+  text-align: center;
   text-decoration: underline;
   text-decoration-thickness: 0.2rem;
 }

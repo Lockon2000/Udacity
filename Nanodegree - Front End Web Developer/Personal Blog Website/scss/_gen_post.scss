@@ -1,0 +1,23 @@
+@use 'vars' as *;
+@use 'extends' as *;
+
+.blogger-ref {
+  font-style: italic;
+}
+
+blockquote {
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 0;
+  
+  @media (min-width: $breakpoint-l) {
+    margin: 2rem;
+  }
+
+  background-color: lighten($color: $color9, $amount: 50%);
+}
+
+.aside-link-list {
+  list-style-type: none;
+  padding-left: 1rem;
+}

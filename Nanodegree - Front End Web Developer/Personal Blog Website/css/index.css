@@ -53,6 +53,7 @@ a {
 body {
   min-height: 100vh;
   margin: 0;
+  background-image: url("../assets/images/background_pattern.png");
 }
 
 #global-header {
@@ -63,6 +64,8 @@ body {
 
 #title-container {
   padding: 0 2rem;
+  color: #4f6f8f;
+  text-align: center;
   text-decoration: underline;
   text-decoration-thickness: 0.2rem;
 }
@@ -96,9 +99,10 @@ body {
   flex-direction: column;
   width: 100%;
   max-width: 35rem;
-  border: 0.3rem solid #c0cdd1;
+  border: 0.6rem solid #c0cdd1;
   padding: 1rem;
   margin: 1rem 0;
+  background-color: white;
   box-shadow: 0.75rem 0.75rem 0.4rem 0 rgba(0, 0, 0, 0.15);
 }
 @media (min-width: 576px) {
@@ -132,6 +136,9 @@ body {
   }
 }
 
+.post-category {
+  margin-bottom: 0;
+}
 .post-category-1 {
   color: #2ecc71;
 }
