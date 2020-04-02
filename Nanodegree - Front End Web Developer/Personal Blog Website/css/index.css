@@ -74,6 +74,15 @@ body {
   padding: 2rem;
 }
 
+#search-button {
+  width: 3rem;
+  height: 3rem;
+  border: 0.125rem solid #ecf0f1;
+  border-radius: 1rem;
+  color: #95a5a6;
+  background-color: white;
+}
+
 #global-footer {
   grid-area: footer;
   border-top: 0.1rem solid #c0cdd1;
@@ -84,6 +93,20 @@ body {
 body {
   display: grid;
   grid-template: "header" 15vh "main" auto "footer" 6vh/auto;
+}
+
+#navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-link {
+  padding: 1rem;
+  border: 0.2rem solid #3498db;
+  margin: 0 2rem;
+}
+.navbar-link:hover {
+  box-shadow: 0 0 1rem 0.3rem #75b9e7;
 }
 
 #posts {

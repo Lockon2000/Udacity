@@ -13,6 +13,21 @@ body {
     / auto;
 }
 
+#navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-link {
+  padding: 1rem;
+  border: .2rem solid $color10;
+  margin: 0 2rem;
+
+  &:hover {
+    box-shadow: 0 0 1rem .3rem $color10-light;
+  }
+}
+
 #posts {
   display: flex;
   flex-flow: row wrap;
