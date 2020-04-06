@@ -1,7 +1,12 @@
 /* Global Variables */
 
-baseURL = "api.openweathermap.org/data/2.5/weather";
-APIKey = "807c570b12e30da6ef5869181eb015e7";
+const baseURL = "api.openweathermap.org/data/2.5/weather";
+const APIKey = "807c570b12e30da6ef5869181eb015e7";
+
+const dateElement = document.querySelector("#date");
+const tempElement = document.querySelector("#temp");
+const contentElement = document.querySelector("#content");
+
 // Create a new date instance dynamically with JS
 let d = new Date();
 let currentDate = (d.getMonth()+1)+'.'+ d.getDate()+'.'+ d.getFullYear();
@@ -21,10 +26,6 @@ async function getWeather(zipCode) {
 function generateCallBack() {
     const zipCode = document.querySelector("#zip").value;
     const userResponse = document.querySelector("#feelings").value;
-
-    const dateElement = document.querySelector("#date");
-    const tempElement = document.querySelector("#temp");
-    const contentElement = document.querySelector("#content");
 
     getWeather(zipCode)
         .then(async (data) => {
