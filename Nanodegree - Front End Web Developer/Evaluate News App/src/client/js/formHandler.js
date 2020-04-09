@@ -1,6 +1,8 @@
 import { makePending, stopPending } from './pending'
 
 
+const urlRegEx = /^https?:\/\/.+\..+/i;
+
 const urlElement = document.getElementById('url');
 const resultsElement = document.getElementById('results');
 const polarityElement = document.getElementById('polarity');
@@ -16,8 +18,23 @@ function sleep(milliseconds) {
 async function handleSubmit(event) {
     event.preventDefault();
 
+    // Reset all fields and properties
+    resultsElement.style = "";
+    polarityElement.value = "";
+    subjectivityElement.value = "";
+    polarityConfElement.value = "";
+    subjectivityConfElement.value = "";
+
+    // Test URL validity
+    if (!(urlRegEx.test(urlElement.value))) {
+        urlElement.setCustomValidity("Invalid URL format");
+        urlElement.addEventListener("keydown", () => {
+            urlElement.setCustomValidity("");
+        })
+        return;
+    }
+
     try {
-        resultsElement.style = "";
         makePending(polarityElement,
                     subjectivityElement,
                     polarityConfElement,
