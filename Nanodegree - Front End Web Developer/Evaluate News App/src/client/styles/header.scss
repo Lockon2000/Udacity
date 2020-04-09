@@ -1,0 +1,14 @@
+@use 'vars' as *;
+
+
+header {
+    height: 15%;
+    padding: 10px 40px;
+    color: $color1;
+    background-color: $color2;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+}

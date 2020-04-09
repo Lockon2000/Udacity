@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Evaluate News App</title>
+</head>
+
+<body>
+    <header>
+        <h1>Evaluate News App</h1>
+    </header>
+
+    <main>
+        <section id="form">
+            <form class="" onsubmit="return Client.handleSubmit(event)">
+                <label for="url">URL</label>
+                <!-- Validate for http and https protocols and valid domain names -->
+                <input id="url" type="url" name="url" value="" placeholder="Type a valid URL here ..." pattern="https?://.+\..+" required>
+                <input type="submit" name="" value="submit">
+            </form>
+        </section>
+
+        <section id="results">
+            <h2>Form Results</h2>
+            <label for="polarity">Polarity</label>
+            <input id="polarity" type="text" name="polarity" value="" placeholder="Submit a valid URL to see the results ...">
+            <label for="subjectivity">Subjectivity</label>
+            <input id="subjectivity" type="text" name="subjectivity" value="" placeholder="Submit a valid URL to see the results ...">
+            <label for="polarity-confidence">Polarity Confidence</label>
+            <input id="polarity-confidence" type="text" name="polarity-confidence" value="" placeholder="Submit a valid URL to see the results ...">
+            <label for="subjectivity-confidence">Subjectivity Confidence</label>
+            <input id="subjectivity-confidence" type="text" name="subjectivity-confidence" value="" placeholder="Submit a valid URL to see the results ...">
+        </section>
+    </main>
+
+    <footer>
+        <p>This is part of a Udacity project.</p>
+    </footer>
+
+    <script>
+        "use strict";
+
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Test if the "service-worker.js" exists and is accessable
+            fetch("/service-worker.js").then(result => {
+                if (result.status >= 200 && result.status <= 399) {
+                    navigator.serviceWorker.register('/service-worker.js');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

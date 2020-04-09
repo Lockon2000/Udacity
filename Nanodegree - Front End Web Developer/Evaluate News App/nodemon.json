@@ -1,0 +1,7 @@
+{
+  "ext": "html scss css js mjs",
+  "ignore": "dist",
+  "events": {
+    "start": "npm run build-dev"
+  }
+}

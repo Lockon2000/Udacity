@@ -1,0 +1,27 @@
+@use 'vars' as *;
+
+
+main {
+}
+
+section {
+    border: 1px solid #545454;
+    border-radius: 3px;
+    padding: 1rem;
+    width: 60%;
+    margin: 1rem auto;
+}
+
+label {
+    color: black;
+    font-weight: initial;
+}
+
+input {
+    padding: 5px 20px;
+    width: 100%;
+    line-height: 16px;
+    margin: 10px 0;
+    color: inherit;
+    font-weight: inherit;
+}

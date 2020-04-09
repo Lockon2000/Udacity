@@ -1,0 +1,15 @@
+@use 'vars' as *;
+
+
+footer {
+  height: 3rem;
+  color: $color1;
+  background-color: $color2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  margin: 0;
+}
