@@ -1,10 +1,12 @@
 const path = require('path');
 const nodeExternals = require('webpack-node-externals');
+const TerserPlugin = require('terser-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 
 module.exports = {
     mode: 'production',
+    stats: 'detailed',
     entry: {
         server: './src/server/server.js',
     },
@@ -12,6 +14,12 @@ module.exports = {
         path: path.join(__dirname, 'dist'),
         publicPath: '/',
         filename: '[name].js',
+    },
+    optimization: {
+        minimizer: [
+            new TerserPlugin({}),
+        ],
+        concatenateModules: false,
     },
     target: 'node',
     node: {

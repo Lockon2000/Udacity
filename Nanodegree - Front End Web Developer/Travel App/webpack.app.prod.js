@@ -3,11 +3,14 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");;
 const TerserPlugin = require('terser-webpack-plugin');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
     mode: 'production',
+    stats: 'detailed',
     entry: {
-        index: './src/client/js/index.js',
+        index: './src/client/index.js',
+        workbox: './src/client/js/workbox.js',
     },
     output: {
         path: path.join(__dirname, 'dist'),
@@ -19,6 +22,7 @@ module.exports = {
             new TerserPlugin({}),
             new OptimizeCSSAssetsPlugin({})
         ],
+        concatenateModules: false,
     },
     target: 'web',
     module: {
@@ -76,18 +80,12 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: "./src/client/views/index.html",
             filename: "./index.html",
-            minify: {
-                collapseWhitespace: true,
-                removeComments: true,
-                removeRedundantAttributes: true,
-                removeScriptTypeAttributes: true,
-                removeStyleLinkTypeAttributes: true,
-                useShortDoctype: true,
-            },
+            favicon: "./src/client/assets/icons/app.ico",
         }),
         new MiniCssExtractPlugin({
             filename: '[name].css',
             chunkFilename: '[id].css',
         }),
+        new WorkboxPlugin.GenerateSW(),
     ]
 };

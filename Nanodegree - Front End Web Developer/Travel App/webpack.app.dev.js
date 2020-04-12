@@ -4,8 +4,9 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     mode: 'development',
+    stats: 'detailed',
     entry: {
-        index: './src/client/js/index.js',
+        index: './src/client/index.js',
     },
     output: {
         path: path.join(__dirname, 'dist'),
@@ -17,8 +18,13 @@ module.exports = {
     devServer: {
         host: 'localhost',
         port: 5010,
-        contentBase: path.join(__dirname, 'dist'),
+        stats: 'minimal',
         hot: true,
+        proxy: {
+            "/api": {
+                target: "http://localhost:5000/",
+            }
+        },
         before(app, server, compiler) {
             // As HMR does not recognize html changes right now, we manually watch for html files and
             // reload the page on changes.
@@ -81,6 +87,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: "./src/client/views/index.html",
             filename: "./index.html",
+            favicon: "./src/client/assets/icons/app.ico",
         }),
     ]
 };

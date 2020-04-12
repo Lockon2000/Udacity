@@ -1,19 +1,117 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-p {
-  font-family: "Times New Roman", Times, serif;
-  color: #3e3e3e;
+@use 'vars' as *;
+@use 'generics' as *;
+@use 'base' as *;
+
+section:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  background-color: $color3;
+
+  label,
+  input,
+  button {
+    width: 85%;
+    margin: 0.5rem 0;
+
+    font-size: 1rem;
+    text-align: center;
+    line-height: 2rem;
+
+    @media (min-width: $breakpoint-s) {
+      width: 85%;
+    }
+
+    @media (min-width: $breakpoint-m) {
+      width: 80%;
+    }
+
+    @media (min-width: $breakpoint-l) {
+      width: 70%;
+    }
+
+    @media (min-width: $breakpoint-xl) {
+      width: 60%;
+    }
+
+    @media (min-width: $breakpoint-xxl) {
+      width: 50%;
+    }
+  }
 }
 
-.description {
-  font-size: 14px;
-  color: #9e9e9e;
+section:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 1rem;
+
+  @media (min-width: $breakpoint-l) {
+    display: grid;
+    grid:
+      "image heads" 2fr
+      "image controls" 1fr
+      "image info" 2fr/
+      1fr 2fr;
+    column-gap: 2rem;
+
+    padding: 0 1rem;
+  }
+
+  background-color: $color4;
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: image;
+
+    max-width: 80vw;
+
+    @media (min-width: $breakpoint-l) {
+      max-width: 40vw;
+    }
+  }
+
+  .heads-container {
+    grid-area: heads;
+  }
+
+  .controls-container {
+    grid-area: controls;
+
+    button {
+      padding: 1rem;
+      border: 0.2rem solid $color5-dark;
+
+      background-color: $color5-light;
+      font-size: 1.5rem;
+
+      @media (min-width: $breakpoint-l) {
+        padding: 0.5rem;
+
+        font-size: 1rem;
+      }
+
+      &:hover {
+        background-color: $color5;
+      }
+    }
+  }
+
+  .info-container {
+    grid-area: info;
+  }
 }
 
-body {
-  margin: 2rem;
-  // background-color: rgb(112, 112, 112);
+#trip-weather-list {
+  list-style-type: circle;
+}
+
+#progress {
+  font-size: 2rem;
+  text-align: center;
 }

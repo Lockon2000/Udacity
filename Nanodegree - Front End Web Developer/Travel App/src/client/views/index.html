@@ -3,15 +3,55 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Express and Webpack App</title>
-  <link rel="shortcut icon" href="#">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Travel Planer</title>
+
+  <!-- Services and APIs -->
+  <script src="https://kit.fontawesome.com/b7306a507f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <h1>Expack tsdfasdfs</h1>
-  <p class="description">Express hay asdfsdafffasdf rr App</p>
-  <input>
-  <img src="../assets/img/test.png">
+  <header>
+    <h1>Travel Planner</h1>
+  </header>
+
+  <main>
+    <section id="questions">
+      <label for="direction">Where do you want to go?</label>
+      <input id="direction" name="direction" type="text" placeholder="Enter City ...">
+      <label for="start-date">And when?</label>
+      <input id="start-date" name="start-date" type="date">
+      <label for="end-date">When are you returning?</label>
+      <input id="end-date" name="end-date" type="date">
+      <button id="send">Send</button>
+    </section>
+
+    <section id="answers" class="not-rendred">
+      <div class="image-container">
+        <img alt="Image of your destination">
+      </div>
+
+      <div class="heads-container">
+        <h2>Your trip to: <span class="trip-destination"></span></h2>
+        <h2>Departing: <span id="trip-date"></span></h2>
+        <h2>Trip length: <span id="trip-length"></span> Day/s</h2>
+      </div>
+
+      <div class="controls-container">
+        <button id="resetButton">Reset</button>
+      </div>
+
+      <div class="info-container">
+        <p><span class="trip-destination"></span> is <span id="trip-distance"></span> day/s away!</p>
+        <p id="trip-weather-string"></p>
+        <ul id="trip-weather-list"></ul>
+      </div>
+    </section>
+
+    <section id="progress">
+      <p id="progress-info"></p>
+    </section>
+  </main>
 </body>
 
 </html>

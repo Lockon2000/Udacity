@@ -1,0 +1,59 @@
+@use 'vars' as *;
+@use 'generics' as *;
+
+* {
+  box-sizing: border-box;
+  @extend %normal-font;
+}
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: $breakpoint-s) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: $breakpoint-m) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: $breakpoint-l) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: $breakpoint-xl) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: $breakpoint-xxl) {
+  html {
+    font-size: 20px;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+  margin: 0;
+}
+
+header {
+  height: 15vh;
+  margin-bottom: 3rem;
+
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+}
