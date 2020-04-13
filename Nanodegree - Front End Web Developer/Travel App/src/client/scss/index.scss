@@ -14,7 +14,6 @@ section:nth-child(1) {
   input,
   button {
     width: 85%;
-    margin: 0.5rem 0;
 
     font-size: 1rem;
     text-align: center;
@@ -38,6 +37,37 @@ section:nth-child(1) {
 
     @media (min-width: $breakpoint-xxl) {
       width: 50%;
+    }
+  }
+
+  label {
+    padding: 0.5rem 0;
+  }
+
+  input {
+    border: 0;
+    border-radius: 1rem;
+
+    &:hover {
+      box-shadow: 0 0 1rem 0 $color3-light;
+    }
+  }
+
+  button {
+    border: 0.2rem solid $color5-dark;
+    margin: 1rem 0;
+
+    background-color: $color5-light;
+    font-size: 1.5rem;
+
+    @media (min-width: $breakpoint-l) {
+      padding: 0.5rem;
+
+      font-size: 1rem;
+    }
+
+    &:hover {
+      background-color: $color5;
     }
   }
 }

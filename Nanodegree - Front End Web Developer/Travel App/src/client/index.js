@@ -109,12 +109,36 @@ document.querySelector("#send").addEventListener("click", async (event) => {
         console.log("The response status code is negative!");
         console.log(response);
 
+        pendingInfoParagraph.textContent = "Request error! Please choose another destination";
+
         throw Error("Unsuccessful request!")
     }
 });
 
 // When the image has finished loading, display the data
-document.querySelector("#answers .image-container img").addEventListener("loadend", () => {
+// The "loadend" event was switched out with these three different events as
+// it was not supported by chrome.
+document.querySelector("#answers .image-container img").addEventListener("load", () => {
+    event.target.setAttribute("alt", "Image of your travel destination.")
+
+    stopPending();
+
+    questionsSection.classList.toggle("not-rendred");
+    answersSection.classList.toggle("not-rendred");
+})
+
+document.querySelector("#answers .image-container img").addEventListener("error", (event) => {
+    event.target.setAttribute("alt", "There was an error loading the image.")
+
+    stopPending();
+
+    questionsSection.classList.toggle("not-rendred");
+    answersSection.classList.toggle("not-rendred");
+})
+
+document.querySelector("#answers .image-container img").addEventListener("abort", (event) => {
+    event.target.setAttribute("alt", "The loading process of the image was aborted.")
+
     stopPending();
 
     questionsSection.classList.toggle("not-rendred");

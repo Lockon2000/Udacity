@@ -32,11 +32,9 @@ function injectData(data) {
 
     /* Inject the appropriate weather string */
 
-    if (data.tripDistance > 0) {
-        tripWeatherString.textContent = "Typical weather for then (forecast):";
-    } else {
-        tripWeatherString.textContent = "Weather info for today:";
-    }
+    tripWeatherString.textContent = (data.tripDistance > 0) ?
+        'Typical weather for then (forecast):' :
+        'Weather info for today:';
 
     /* Inject the weather details data */
 
@@ -44,22 +42,21 @@ function injectData(data) {
     //  because the container is hidden.
     tripWeatherList.innerHTML = "";
 
-    const tripWeatherTemp = document.createElement("li");
-    tripWeatherTemp.textContent = `Tempreture: ${data.weatherData.temp} °C`;
-    const tripWeatherApparentTemp = document.createElement("li");
-    tripWeatherApparentTemp.textContent = `Feeled tempreture: ${data.weatherData.apparentTemp} °C`;
-    const tripWeatherWindSpeed = document.createElement("li");
-    tripWeatherWindSpeed.textContent = `Wind speed: ${data.weatherData.windSpeed} m/s`;
-    const tripWeatherUV = document.createElement("li");
-    tripWeatherUV.textContent = `UV index: ${data.weatherData.uv}`;
-    const tripWeatherDescription = document.createElement("li");
-    tripWeatherDescription.textContent = `Description: ${data.weatherData.description}`;
-
-    if (data.weatherData.temp) { tripWeatherList.appendChild(tripWeatherTemp); }
-    if (data.weatherData.apparentTemp) { tripWeatherList.appendChild(tripWeatherApparentTemp); }
-    if (data.weatherData.windSpeed) { tripWeatherList.appendChild(tripWeatherWindSpeed); }
-    if (data.weatherData.uv) { tripWeatherList.appendChild(tripWeatherUV); }
-    if (data.weatherData.description) { tripWeatherList.appendChild(tripWeatherDescription); }
+    if (data.weatherData.temp) {
+        tripWeatherList.innerHTML += `<li>Tempreture: ${data.weatherData.temp} °C</li>`;
+    }
+    if (data.weatherData.apparentTemp) {
+        tripWeatherList.innerHTML += `<li>Feeled tempreture: ${data.weatherData.apparentTemp} °C</li>`;
+    }
+    if (data.weatherData.windSpeed) {
+        tripWeatherList.innerHTML += `<li>Wind speed: ${data.weatherData.windSpeed} m/s</li>`;
+    }
+    if (data.weatherData.uv) {
+        tripWeatherList.innerHTML += `<li>UV index: ${data.weatherData.uv}</li>`;
+    }
+    if (data.weatherData.description) {
+        tripWeatherList.innerHTML += `<li>Description: ${data.weatherData.description}</li>`;
+    }
 
     /* Inject the image */
 

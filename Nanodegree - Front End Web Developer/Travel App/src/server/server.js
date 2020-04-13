@@ -37,6 +37,10 @@ app.get("/api/process", async (req, res, next) => {
     } catch (err) {
         console.log("Catched the error! Server continues operation ...");
         console.log(err);
+
+        res.status(500).send({
+            message: "Internal Server Error!"
+        })
     }
 })
 
